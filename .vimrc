@@ -1,5 +1,25 @@
 syntax on
 set number
+set nowrap
+
+"" Search options
+set hlsearch
+set incsearch
+set ignorecase
+set showmatch
+
+"" Backup and swp files
+set nobackup
+set noswapfile
+
+"" Visuals
+set title
+set visualbell
+set noerrorbells
+
+"" History
+set history=1000
+set undolevels=1000
 
 "" Plugins Config
 
@@ -30,7 +50,7 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 9
   elseif has("gui_win32")
-    set guifont=Consolas:h11:cANSI
+    set guifont=Consolas:h10:cANSI
   endif
 endif
 
