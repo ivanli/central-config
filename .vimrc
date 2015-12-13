@@ -1,3 +1,6 @@
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
 syntax on
 set number
 set nowrap
@@ -21,6 +24,9 @@ set noerrorbells
 set history=1000
 set undolevels=1000
 
+"" Remap keys
+nnoremap <esc> :noh<return><esc>
+
 "" Plugins Config
 
 set nocompatible              " be iMproved, required
@@ -31,6 +37,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gilgigilgil/anderson.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
