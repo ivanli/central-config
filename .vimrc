@@ -4,6 +4,8 @@ let g:ycm_server_log_level = 'debug'
 syntax on
 set number
 set nowrap
+"" UTF-8 encoding required for NERDTree to function properly
+set encoding=utf-8
 
 "" Search options
 set hlsearch
@@ -38,6 +40,8 @@ call vundle#begin()
 
 Plugin 'gilgigilgil/anderson.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,3 +73,7 @@ augroup END " }
 "" Set color schemes
 
 colorscheme anderson
+
+"" Remove menu and tool bars from GUI
+set guioptions-=T
+set guioptions+=m
