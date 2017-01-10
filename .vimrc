@@ -1,11 +1,19 @@
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
+"" Basic visual options
 syntax on
 set number
 set nowrap
 "" UTF-8 encoding required for NERDTree to function properly
 set encoding=utf-8
+
+"" Auto wrap lines
+set tw=120
+
+"" Complete mode to be bash-like
+set wildmode=longest,list,full
+set wildmenu
 
 "" Search options
 set hlsearch
@@ -26,7 +34,7 @@ set noerrorbells
 set history=1000
 set undolevels=1000
 
-"" Remap keys
+"" Remap keys for clearing search highlights
 nnoremap <esc> :noh<return><esc>
 
 "" Plugins Config
